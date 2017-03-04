@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebViewJSLocal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ni0-00-Kgb">
+                                <rect key="frame" x="0.0" y="34" width="369" height="473"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="oUb-CE-9hh"/>
+                                </connections>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQc-ne-eKe">
+                                <rect key="frame" x="52" y="558" width="30" height="30"/>
+                                <state key="normal" title="Left"/>
+                                <connections>
+                                    <action selector="leftClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="nty-es-mxP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiF-VQ-X4u">
+                                <rect key="frame" x="285" y="558" width="36" height="30"/>
+                                <state key="normal" title="Right"/>
+                                <connections>
+                                    <action selector="rightClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ZJ-JA-cHJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ER0-y5-PZE">
+                                <rect key="frame" x="132" y="605" width="81" height="30"/>
+                                <state key="normal" title="Run JSCore"/>
+                                <connections>
+                                    <action selector="callJSCore" destination="BYZ-38-t0r" eventType="touchUpInside" id="vUW-fe-flB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ER0-y5-PZE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="132" id="1RO-33-IV7"/>
+                            <constraint firstItem="pQc-ne-eKe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="36" id="A1q-P4-oYS"/>
+                            <constraint firstItem="pQc-ne-eKe" firstAttribute="top" secondItem="Ni0-00-Kgb" secondAttribute="bottom" constant="51" id="Db0-h3-tCT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eiF-VQ-X4u" secondAttribute="trailing" constant="38" id="JDY-Xh-ybQ"/>
+                            <constraint firstItem="Ni0-00-Kgb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JQX-FP-ouU"/>
+                            <constraint firstItem="pQc-ne-eKe" firstAttribute="baseline" secondItem="eiF-VQ-X4u" secondAttribute="baseline" id="RAG-Ek-Xjq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ni0-00-Kgb" secondAttribute="bottom" constant="160" id="SBB-Ku-c6w"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ER0-y5-PZE" secondAttribute="bottom" constant="32" id="ao5-oW-obU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ni0-00-Kgb" secondAttribute="trailing" constant="-10" id="dU0-8V-ChV"/>
+                            <constraint firstItem="Ni0-00-Kgb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="14" id="r9f-8w-0Ac"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myWebView" destination="Ni0-00-Kgb" id="v66-rP-GJv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
